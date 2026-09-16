@@ -1,0 +1,7 @@
+* text=auto
+*.pdf binary
+*.png binary
+*.webp binary
+*.woff2 binary
+# Keep third-party license files byte-for-byte, including their original spacing.
+fonts/*-OFL.txt -text whitespace=-blank-at-eol

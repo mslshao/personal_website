@@ -1,0 +1,15 @@
+{
+  "name": "michaelshao-personal-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "preview": "node tools/preview.mjs",
+    "test": "node tools/verify.cjs",
+    "images": "node tools/optimize-images.cjs",
+    "package": "powershell -NoProfile -File tools/package.ps1"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.4"
+  }
+}

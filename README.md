@@ -1,63 +1,88 @@
-Hi there!
+# Michael Shao's personal website
 
-This is the README to my personal website that I regularly maintain for the moment. (Mar 2016)
+A static personal website with a responsive photo gallery, local fonts, a contact form, and a downloadable resume. HTML, CSS, and JavaScript run directly in the browser. The host needs no Node.js, Python, or build process.
 
-##Languages This Website Uses:
-* HTML
-* CSS
-* JavaScript
-* PHP (contact form)
+GitHub stores the website and maintenance sources. Publishing remains a manual upload through cPanel; pushing or merging a branch does not deploy the site.
 
-##External Library uses:
-* Font Awesome: http://fortawesome.github.io/Font-Awesome/
-* jQuery
+## Preview locally
 
-##Upcoming features:
-* Blog support (WordPress plugin or otherwise)
- * I started the blog, I just need time to make (or integrate) a widget that will enable easy re-use in the website.
-* YouTube widget
-* Aggregate Feed Update
+With Node.js installed:
 
-##Even farther out:
-* Create a Gallery! (kinda done?)
-* Have lots of images for the Gallery! (need a better quality camera...)
-* Probably create another slider-type-flex thing underneath the "quotes" section!
- * I know this is a "thing" already, but it's currently not "great" (at least not the way I envisioned a better one to look), but it's "good enough" for now.
+```text
+npm run preview
+```
 
-##Things that are currently pissing me off:
-* CSS formatting is difficult, especially when you mix absolute & fixed positions.
- * I should probably go back and remove the hacks in some areas - I over-indexed on a ton of CSS that I haven't used that much yet.
-* With the architecture / design / layout of this site, it is difficult to add logos to a standard navbar row (or column) to make them more easily accessible.
- * It's also difficult to line them up properly with their relevant experience without completely rewriting the entire CSS or changing the design of the layout.
+Visit <http://127.0.0.1:4173>. The preview binds to this computer only, disables caching, and serves only the website and its assets. External links and contact-form delivery need an internet connection. Open `index.html` directly for a simpler preview.
 
-##Changelog:
+## Upload through cPanel
 
-###September 12, 2017
-* Added new background photos for the landing page and the quotes are (since I finally started using my phone camera more).
-* Introduced "Bootstrap", which came with other goodies like a photo carousel
-* Created a photo carousel, which should be "not terrible" but this is draft 1 for that... so yeah.
- * Added a bunch of photos (7 total, including the original background/header photo)
-* Fixed content on index.html regarding hobbies and overall "about" section.
-* Updated the FontAwesome library to 4.7, since a new one is available.
- * Hey look, they finally added Quora!
+On Windows, prepare the upload:
 
-###October 25, 2016
-* Added logos for AGF, Blue Coat, Datalot, Riot Games, Audible, and Amazon, as well as the ability to click on them to scroll to their respective regions.
-* Fixed a bug where, when scrolling, the navbar would prematurely appear, or stay hovering for too long.
- * This was due to a bug in the JavaScript that was written (that was surprisingly written over 1.5 years ago, and I don't remember much about).
-* Changed contact information due to moving off of a deprecated username (due to password reuse concerns).
- * Removed some links for accounts no longer used, and added GitHub account (with updated username) since it's cool and hip to use a professional name.
-* Replaced the Twitter feed with my personal one (which will be kept private for now, due to privacy concerns).
-* Added another resume because "reasons" -- finding the website that does some pretty cool designs around user-generated fields is useful too!
+```text
+npm run package
+```
 
-###March 3, 2016
-* Fixed reCaptcha behaviour, once and for all (finally).
- * Changed reCaptcha library to Google's official PHP-supported 1.0.0 version.
- * Special thanks to [this tutorial](http://webdesign.tutsplus.com/tutorials/how-to-integrate-no-captcha-recaptcha-in-your-website--cms-23024) for writing a detailed solution to integrating Google reCaptcha.
-* Profile picture update, since \#newbadgephotos
-* Updated website summary & work profile
+This creates `release/site-upload.zip` and a SHA-256 file manifest. The ZIP contains 8 root files, `images/optimized/`, and `fonts/`, including the font licenses. It excludes local notes, tools, editable content, backups, and Git metadata.
 
-Thanks for stopping by my Github! 
-I know it's pretty barren -- but at least there's this!
+1. Back up the current live website through cPanel.
+2. Upload `release/site-upload.zip` into the document root assigned to **michaelshao.com** and extract it there. The ZIP has `index.html` at its top level; avoid an extra nested directory.
+3. Preserve the host's `.htaccess`, `.well-known`, mail settings, redirects, and unrelated folders. This package does not alter them.
+4. Delete the uploaded ZIP after extraction. Hard-refresh the live site, open a photograph, download the resume, and send yourself a contact-form test to confirm inbox delivery.
 
-Michael
+**Upload the prepared ZIP, not the entire repository.** If old archives or backup ZIPs remain publicly accessible on the host, back them up and move them outside the document root. A `robots.txt` rule is not access protection.
+
+## Maintain the site
+
+| Content | File or folder |
+| --- | --- |
+| Page content and links | `index.html` |
+| Layout and colours | `styles.css` |
+| Photo viewer | `site.js` |
+| Optimized photographs | `images/optimized/` |
+| Local fonts and licenses | `fonts/` |
+| Editable resume | `content/resume.json` |
+| Generated resume | `ms-resume.pdf` |
+| Local preview, checks, and build tools | `tools/` |
+
+CSS, JavaScript, and resume links include version queries in `index.html`. Update the relevant query when changing those files for publication. Use new image filenames when replacing images that may be cached.
+
+### Resume
+
+With Python installed:
+
+```text
+python -m pip install reportlab
+python tools/build-resume.py
+```
+
+Edit `content/resume.json`, rebuild, visually review all PDF pages, update the resume link's version query, and rebuild the upload package.
+
+### Photographs and fonts
+
+Original photographs are kept outside this repository. The optimized assets are committed and need no build step for preview or publishing. To regenerate them, install the development dependencies and supply the original website folder, containing `images/` and `favicon.png`:
+
+```text
+npm install
+npm run images -- "C:\path\to\original-website-folder"
+```
+
+Without an argument, the image tool looks for originals in this repository's root. Original files are never overwritten. Review the generated photographs and rebuild the upload package afterward.
+
+`python tools/vendor-fonts.py` refreshes the existing Latin font subsets and their licenses from Google Fonts. This maintenance command needs internet access; the published site loads fonts locally. Preserve the included font licenses and `fonts/SOURCES.txt`.
+
+## Validation
+
+With Google Chrome installed, start the local preview in one terminal and run in another:
+
+```text
+npm install
+npm test
+```
+
+The checks cover desktop and phone layouts, all gallery images, keyboard navigation, focus restoration, image loading and failure recovery, reduced motion, large text, local fonts with external connections blocked, and use without JavaScript. Form validation is tested locally with requests to Formspree blocked; the tests do not send messages. Real inbox delivery and host-specific HTTPS, redirects, and document-root settings need checking on the live host.
+
+Screenshots and results go into `.local/checks/` and are ignored by Git. The suite defaults to installed Chrome. In PowerShell, `$env:TEST_BROWSER='msedge'` selects Edge; `$env:TEST_BROWSER='chromium'` uses Playwright's browser after `npx playwright install chromium`.
+
+## History
+
+The 2026 refresh replaces the active 2017 website with the locally reviewed static version. Previous PHP, libraries, photographs, and page versions remain available in Git history. Local archives, full-resolution originals, generated release ZIPs, and test output are excluded from new commits.

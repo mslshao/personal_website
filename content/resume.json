@@ -1,0 +1,107 @@
+{
+  "name": "Michael Shao",
+  "contact": "Seattle, WA - (347) 699-6049 - linkedin.com/in/mshao - michaelshao.com",
+  "summary": "Senior Software Engineer at Playlist Technologies with 10+ years of distributed systems experience at Amazon and AWS. Previously led legal technology infrastructure and agentic AI workflows at Morgan & Morgan. Expertise in Python/FastAPI, cloud infrastructure, Datadog observability, and Terraform/Terragrunt. AWS Databases Blog author and re:Invent 2024 speaker, with experience setting technical standards, interviewing, and mentoring engineers.",
+  "competencies": [
+    {
+      "label": "Technical Leadership",
+      "text": "Architectural Design, System Design Reviews, Technical Mentoring, Code Quality Standards, 0-1 Experimentation"
+    },
+    {
+      "label": "Backend Systems",
+      "text": "Distributed Systems, Microservices, RESTful APIs, Asynchronous Processing, Event-Driven Architecture"
+    },
+    {
+      "label": "Cloud & Infrastructure",
+      "text": "AWS (DynamoDB, Lambda, API Gateway, SNS/SQS, SWF, CDK), Terraform, Terragrunt, Infrastructure as Code"
+    },
+    {
+      "label": "AI / LLM Tooling",
+      "text": "LLM Orchestration, Agentic Workflows, Claude/Anthropic, ML-Powered Data Processing"
+    },
+    {
+      "label": "Observability",
+      "text": "Datadog (APM, Dashboards, Alerting), Structured Logging"
+    },
+    {
+      "label": "Data Storage",
+      "text": "DynamoDB, DocumentDB, Elastic Cluster Operations, Document Indexing, Dyntastic, Data Pipeline Architecture"
+    },
+    {
+      "label": "Languages",
+      "text": "Python, FastAPI, Pydantic, Java, JavaScript/TypeScript"
+    },
+    {
+      "label": "Cross-Functional",
+      "text": "Developer Advocacy, Technical Content Strategy, Product Management Advisory, Technical Bar Raiser"
+    }
+  ],
+  "jobs": [
+    {
+      "company": "Playlist Technologies",
+      "title": "Senior Software Engineer",
+      "date": "Aug 25, 2026 - Present",
+      "description": "",
+      "bullets": []
+    },
+    {
+      "company": "Morgan & Morgan, P.A.",
+      "title": "Staff Software Engineer / Tech Lead Manager (TLM) ",
+      "date": "Remote (Redmond, WA) - Jul 2025 - Aug 21, 2026",
+      "description": "Led 0-1 experimentation initiatives and human-in-the-loop productivity improvements for a legal technology platform serving Mass Tort, Medical Malpractice, and Product Liability cases. Direct leadership of a 2-person team with indirect influence across a 30-person engineering organization.",
+      "bullets": [
+        "Agentic AI platform: Architected LLM-powered agentic workflows using Claude Code (Anthropic) and Python/FastAPI, establishing coding standards and agentic patterns adopted across a 30-person engineering org - measurably reduced review cycles and accelerated feature delivery",
+        "Document indexing and search: Owned document indexing services and operations for Elastic clusters holding medical records, court dockets, and police reports, supporting document search through the firm's customer-facing AI tooling and its internal model facade",
+        "Client data processing: Designed and implemented ML-powered address parsing system matching 2,250 clients to contaminated water sites with 89% accuracy for year-range address mappings, eliminating a manual data-entry bottleneck",
+        "Observability: Instrumented backend services with Datadog APM and structured logging, establishing team-wide dashboards and alerting standards that introduced proactive incident detection where none previously existed",
+        "Infrastructure as code: Owned Terraform/Terragrunt configuration across 7 services (including 2 greenfield builds), enabling repeatable environment provisioning and auditability across the platform",
+        "Build performance: Cut primary repository test cycle time by 50% through remote caching, accelerating developer iteration",
+        "CI/CD reliability: Improved deployment reliability and rollback safety by migrating to version-controlled release tagging, reducing mean time to recovery"
+      ]
+    },
+    {
+      "company": "Amazon Web Services (AWS)",
+      "title": "Senior Developer Advocate, DynamoDB ",
+      "date": "Seattle, WA - Nov 2023 - Jul 2025",
+      "description": "(Technical Interviewing Bar Raiser: 200+ interviews; Asians@Amazon Global Board, Professional Development Coordinator; Social Media Bar Raiser) Led technical content and developer experience initiatives for Amazon DynamoDB while maintaining engineering responsibilities. Bridged product engineering, marketing, and the developer community through strategic technical storytelling.",
+      "bullets": [
+        "Automated publishing pipeline: Architected automated code sample integration system for the AWS SDK Examples repository, reducing manual operations by 75% and improving code quality consistency across the DynamoDB developer experience",
+        "Cross-team standardization: Led internal engineering effort to standardize documentation and code sample creation processes across 5 teams, enabling faster iteration",
+        "Developer reach: Published technical deep-dives on CDC strategies and DynamoDB 2024 innovations on the AWS Databases Blog, driving measurable developer awareness",
+        "re:Invent 2024 speaker: Delivered session DAT414 (DynamoDB Code Talk) at AWS re:Invent 2024 to 50+ engineers",
+        "Strategic advisory: Served as technical advisor to the non-relational databases Product Management team, influencing roadmap decisions based on customer feedback"
+      ]
+    },
+    {
+      "company": "Amazon.com",
+      "title": "Senior Software Engineer, Retail Compatibility Experience (ARCX) ",
+      "date": "Seattle, WA - Jul 2022 - Nov 2023",
+      "description": "Led engineering efforts for a compatibility service platform processing millions of customer queries daily. Spearheaded technical design and launch execution for critical retail infrastructure during the Unified Compatibility (Unicom) initiative.",
+      "bullets": [
+        "ARCAPI: Architected the ARCAPI service backend from 0-1, handling millions of daily retail compatibility queries at sub-100ms p99 latency across 1M+ compatibility records, driving the Unicom initiative from design through production launch",
+        "Technical leadership: Grew team throughput by 25% by owning system design review cycles and running structured mentorship for entry-level engineers, with 4 promoting to the next level"
+      ]
+    },
+    {
+      "company": "Amazon.com",
+      "title": "Software Development Engineer, Confident Customer Shopping (CCS) ",
+      "date": "Seattle, WA - Dec 2019 - Jul 2022",
+      "description": "Architected data pipelines and front-end widgets surfacing compatibility information. Executed on a mission to accelerate feature development through scalable platform solutions.",
+      "bullets": [
+        "Database migration: Led zero-downtime migration of critical compatibility data from DocumentDB to DynamoDB, eliminating 90% of operational overhead",
+        "API performance: Designed Lambda-based RESTful service improving API throughput by 40% and absorbing peak traffic load without degradation"
+      ]
+    },
+    {
+      "company": "Amazon.com",
+      "title": "Software Development Engineer, Supplier Fulfillment Services (SFS) ",
+      "date": "Seattle, WA - Jun 2015 - Dec 2019",
+      "description": "Designed and implemented critical backend services for a third-party seller logistics platform connecting Seller Central merchants with DHL, DPD, FedEx, UPS, USPS, and Royal Mail, managing millions of daily transactions.",
+      "bullets": [
+        "Reliability engineering: Designed self-throttling transaction persistence layer (DynamoDB + AWS SWF) sustaining burst load while protecting downstream carrier integrations (DHL, FedEx, UPS) from burst-load overload",
+        "Async dispatch: Designed configuration-driven manifest dispatcher using AWS SNS/SQS, reducing latent operational calls by 30%"
+      ]
+    }
+  ],
+  "education": "University of Waterloo, Faculty of Mathematics - Honours Bachelor of Computer Science (Co-op Program), Minor in History - 2014"
+}

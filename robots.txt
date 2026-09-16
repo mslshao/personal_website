@@ -1,3 +1,8 @@
-#Begin Attracta SEO Tools Sitemap. Do not remove
-sitemap: http://cdn.attracta.com/sitemap/2597439.xml.gz
-#End Attracta SEO Tools Sitemap. Do not remove
+User-agent: *
+Allow: /
+Disallow: /_archive/
+Disallow: /_archive2026/
+Disallow: /.local/
+Disallow: /tools/
+
+Sitemap: https://michaelshao.com/sitemap.xml

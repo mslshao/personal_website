@@ -1,597 +1,424 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en-CA">
 <head>
-   <meta charset="utf-8">
-   <title>Michael Shao</title>
-   <meta name="description" content="One-page website with CV. Gallery to come!">
-   <meta name="author" content="Michael Shao">
-   
-   <!-- Mobile stuff -->
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- CSS and JS stuff -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/default.css">
-   <link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
-   <script src="js/modernizr.js"></script>
-
-   <link rel="shortcut icon" href="favicon.png" >
+  <meta charset="utf-8">
+  <title>Michael Shao | Software Engineer, Photographer &amp; Writer</title>
+  <meta name="description" content="Michael Shao. Senior Software Engineer at Playlist Technologies, photographer, writer, and speedcuber. Redmond, Washington.">
+  <meta name="author" content="Michael Shao">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="canonical" href="https://michaelshao.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michaelshao.com/">
+  <meta property="og:title" content="Michael Shao | Software Engineer, Photographer &amp; Writer">
+  <meta property="og:description" content="Senior Software Engineer at Playlist Technologies. Photography, writing, and a lifelong curiosity about how things work.">
+  <meta property="og:image" content="https://michaelshao.com/images/optimized/header-background-1920.webp">
+  <meta property="og:image:alt" content="Landscape photograph by Michael Shao">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1b2a32">
+  <link rel="stylesheet" href="fonts/fonts.css?v=20260915">
+  <link rel="stylesheet" href="styles.css?v=20260915-2">
+  <script src="site.js?v=20260915-2" defer></script>
 </head>
-
 <body>
-	<!-- Header ================================================== -->
-	<header id="home">
-		<nav id="nav-wrap">
-			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show nav bar</a>
-			<a class="mobile-btn" href="#" title="Hide navigation">Hide nav bar</a>
-			<ul id="nav" class="nav">
-				<li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-				<li><a class="smoothscroll" href="#about">About</a></li>
-				<li><a class="smoothscroll" href="#carousel">Photos</a></li>
-				<li><a class="smoothscroll" href="#resume">Resume</a></li>
-				<li><a class="smoothscroll" href="#quotes">Quotes</a></li>
-				<li><a class="smoothscroll" href="#contact">Contact</a></li>
-			</ul> <!-- end #nav -->
-		</nav> <!-- end #nav-wrap -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-		<div class="row banner">
-			<!-- <div id="overlay-background"></div> <!-- Maybe if gradients come back into style... -->
-			<div class="banner-text">
-				<h1 class="responsive-headline">Michael Shao</h1>
-				<h3>I'm a <span>software engineer</span>, <span>product manager</span>, <span>entrepreneur</span>, <span>technologist</span> and <span>gamer</span>.
-				I'm all about solving user frustration, as well as creating insightful and impactful experiences for people around the world.
-				Click any of the icons below to find me online.<br>
-				Feel free to learn more <a class="smoothscroll" href="#about">about me</a>.
-				</h3>
-				<hr />
-				<ul class="social">
-					<li><a href="http://www.facebook.com/chairmanshao"><i class="fa fa-facebook-official"></i></a></li>
-					<li><a href="http://twitter.com/mslshao"><i class="fa fa-twitter-square"></i></a></li>
-					<li><a href="http://instagram.com/mslshao"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="http://ca.linkedin.com/in/mshao"><i class="fa fa-linkedin-square"></i></a></li>
-					<li><a href="https://github.com/mslshao"><i class="fa fa-github"></i></a></li>
-					<li><a href="http://angel.co/mshao"><i class="fa fa-angellist"></i></a></li>
-					<li><a href="http://reddit.com/u/riotshao"><i class="fa fa-reddit-square"></i></a></li>
-					<li><a href="http://www.quora.com/Michael-Shao-6"><i class="fa fa-quora"></i></a></li>
-					<li><a href="http://mshao.yelp.ca"><i class="fa fa-yelp"></i></a></li>
-					<li><a href="http://blog.michaelshao.com"><i class="fa fa-wordpress"></i></a></li>
-					<li><a href="http://www.youtube.com/user/chairmanshao"><i class="fa fa-youtube-play"></i></a></li>
-					<li><a href="http://steamcommunity.com/id/mshao"><i class="fa fa-steam-square"></i></a></li>
-				</ul>
-			</div>
-		</div>
+  <!-- The cube mark: a 3x3 nod to two decades of speedcubing. -->
+  <nav class="nav" aria-label="Site">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">
+        <svg class="cube" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+          <g fill="#1b2a32">
+            <rect x="0" y="0" width="5.5" height="5.5"/><rect x="7.25" y="0" width="5.5" height="5.5"/><rect x="14.5" y="0" width="5.5" height="5.5"/>
+            <rect x="0" y="7.25" width="5.5" height="5.5"/><rect x="14.5" y="7.25" width="5.5" height="5.5"/>
+            <rect x="0" y="14.5" width="5.5" height="5.5"/><rect x="7.25" y="14.5" width="5.5" height="5.5"/>
+          </g>
+          <rect x="7.25" y="7.25" width="5.5" height="5.5" fill="#2e7d74"/>
+          <rect x="14.5" y="14.5" width="5.5" height="5.5" fill="#b05230"/>
+        </svg>
+        Michael Shao
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#photographs">Photographs</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-		<p class="scrolldown">
-			<a class="smoothscroll" href="#about" title="About Me"><i class="icon-down-circle"></i></a>
-		</p>
-	</header> <!-- Header End -->
-	
-	<!-- About Section ================================================== -->
-	<section id="about">
-		<div class="row">
-			<div class="three columns">
-				<img class="profile-pic"  src="images/profilepic.jpg" alt="" />
-			</div>
-			<div class="nine columns main-col">
-				<h2>About</h2>
-				<p>
-					I graduated from the <a href='http://uwaterloo.ca'>University of Waterloo</a> in December of 2014 with an <b>Honours Bachelor of Computer Science Co-op</b>, with a <b>History Minor</b>.
-					In June 2015, I started working full-time as an <b>SDE</b> (<u>Software Development Engineer</u>) at <a href="http://www.amazon.com">Amazon.com</a> in Seattle, Washington. During my co-op terms in university, I worked at six different companies in six different industries, in a variety of roles. 
-					I've been a <u>software automation developer</u>, a <u>software development engineer in test</u>, a <u>software engineer</u>, a <u>product manager</u>, and a <u>web developer</u>. 
-					As an alumni of the <a href='http://velocity.uwaterloo.ca/'><u>VeloCity</u></a> residence incubator program (at <a href='http://twitter.com/uwaterloo'>UWaterloo</a>) between August 2011 and December 2013, I built an awesome product, while helping others achieve their successes in other projects as well. 
-					I am passionate about <b><u>solving user frustration</u></b>, on a small scale for personal projects, and on a large scale in a workplace environment. My belief: the <u>best possible feedback</u> comes through <b><u>data</u></b>;
-					regardless of what users or developers believe, at the end of the day, <u><b>data</b></u> is the single deciding factor in making product decisions.
-				</p>
-				<h2>Hobbies / Interests</h2>
-				<p>
-					I play sports &amp; do other things on the side: Snowboarding, Tennis, Badminton, Ice/Ball Hockey, Ping Pong, Baseball and American Football, just to name a few! I like solving Rubik's Cubes and similar puzzles; I used to play a mean game of chess, as well as dabbling in professional Texas Hold'em and Blackjack. I'm slowly getting back into singing, and playing guitar again - be sure to keep an eye out for some YouTube covers in the coming months!
-					<br>
-					I used to trade equities in capital markets regularly. My portfolio wasn't amazing; I ended up breaking even after all commissions and fees were settled, despite my relative inexperience with trading. I'm interested in Bitcoin; I have been since it came out. I even invested some money in it before it tanked below $300 USD. Maybe I'll jump back in one day to more shenanigans, but right now, I'll just watch. 
-					<br>
-					I am starting to blog more often. I most recently (January 2017) wrote a post about transitioning from classroom learning to "workplace learning". Feel free to check it out on <a href='http://blog.michaelshao.com'><u>my blog</u></a> (hosted on WordPress). I'll find a way to build a blog on this website later - I made the WP blog way before this iteration of the website was even conceived, and my lack of foresight for the integration created some interesting challenges.
-					<br>
-					I like photography; I took all of the photos that are featured on this website, such as the header photo, and the background photo in the quotes section. The carousel includes photos such as the view of Lake Minnewanka near Banff, Moraine Lake (in Banff National Park), Zion National Park, and more. When I acquire a better camera, I'll expand a gallery on this page.<br>
-					<br>
-					I've been on TV before; specifically <a href="http://www.pbs.org/newshour/bb/rubiks-cubes-mystique-remains-40-years-later/">PBS Newshour</a>. As you can tell, I love <a href="https://www.worldcubeassociation.org/results/p.php?i=2009SHAO02">cubing</a>.
-				</p>
-				<div class="row">
-					<div class="columns contact-details">
-						<h2>Contact Information</h2>
-						<p class="address">
-							<span>Michael Shao</span><br>
-							<span>
-								<a class="smoothscroll" href="#contact">Ask me for address!</a><br>
-								Seattle, Washington, USA
-							</span><br>
-							<span><a href="tel:+13476996049">347-699-6049</a></span><br>
-							<!--<span><a href="mailto:me@michaelshao.com">me@michaelshao.com</a></span><br>-->
-						</p>
-					</div>
-					<div class="columns download">
-						<p>
-							<a href="http://michaelshao.com/ms-resume.pdf" class="button" download><i class="fa fa-download"></i>Download Resume</a>
-						</p>
-						<!-- <p>
-							<a href="http://michaelshao.com/resume1.pdf" class="button" download><i class="fa fa-download"></i>Download Alternate Resume</a>
-						</p> <!-- Commented out because who needs two resumes? -->
-					</div>
-				</div> <!-- end row -->
-			</div> <!-- end .main-col -->
-		</div>
-		<!-- <p id="resume-scroll" class="scrolldown">
-			<a class="smoothscroll" href="#resume" title="Resume">
-				<i class="icon-down-circle"></i>
-			</a>
-		</p> <!-- hmm, there's a bug with this on mobile -->
-	</section> <!-- About Section End-->
-	<section id="carousel"> <!-- Carousel Section Start -->
-      <div id="myCarousel" class="carousel slides" data-ride="carousel">
-		  <!-- Indicators -->
-          <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-              <li data-target="#myCarousel" data-slide-to="3"></li>
-              <li data-target="#myCarousel" data-slide-to="4"></li>
-              <li data-target="#myCarousel" data-slide-to="5"></li>
-              <li data-target="#myCarousel" data-slide-to="6"></li>
-          </ol>
-        
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-              <div class="item active">
-			      <img src="images/zion-national-park.jpg" alt="Zion National Park">
-                  <div class="carousel-caption">
-				      <h2 style="color:white;margin-bottom:3%">Zion National Park</h2>
-                  </div>
-              </div>
-        
-	          <div class="item">
-	              <img src="images/hoover-dam.jpg" alt="Hoover Dam">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;margin-bottom:3%">Hoover Dam</h2>
-	              </div>
-	          </div>
-	        
-	          <div class="item">
-	              <img src="images/red-rock.jpg" alt="Red Rock Canyon National Conservation Area">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;">Red Rock Canyon</h2>
-					  <p style="margin-bottom:3%;">Keystone Thrust Trail had the best views!</p>
-	              </div>
-	          </div>
-	          
-	          <div class="item">
-	              <img src="images/lake-minnewanka.jpg" alt="Lake Minnewanka in Banff National Park">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;">Lake Minnewanka</h2>
-					  <p style="margin-bottom:3%;">Boating in Banff National Park</p>
-	              </div>
-	          </div>
-	          
-	          <div class="item">
-	              <img src="images/moraine-lake.jpg" alt="Moraine Lake in Banff National Park">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;">Moraine Lake</h2>
-					  <p style="margin-bottom:3%;">Banff National Park in the summertime is awe-inspiring!</p>
-	              </div>
-	          </div>
-	          
-	          <div class="item">
-	              <img src="images/rainier.jpg" alt="Mount Rainier">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;">Mount Rainier</h2>
-					  <p style="margin-bottom:3%;">The junction near the peak of the trail.</p>
-	              </div>
-	          </div>
-	          
-	          <div class="item">
-	              <img src="images/mount-hood.jpg" alt="Mount Hood">
-	              <div class="carousel-caption">
-					  <h2 style="color:white;">Mount Hood</h2>
-					  <p style="margin-bottom:3%;">Just outside of Hood River, Oregon, there's a beautiful outlook of the mountain.</p>
-	              </div>
-	          </div>
-	      </div>
-        
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-          </a>
-	  </div>
-	</section> <!-- Carousel Section End -->
-	<!-- Resume Section ================================================== -->
-	<section id="resume">
-		<!-- Education ----------------------------------------------- -->
-		<div class="row education">
-			<div class="three columns header-col">
-				<h1><span>Education</span></h1>
-				<img src="images/UniversityOfWaterloo_logo.jpg" alt="University of Waterloo" style="width:368px;height:100px;">
-			</div>
-			<div class="nine columns main-col">
-				<div class="row item">
-					<div class="twelve columns">
-						<h3>University of Waterloo</h3>
-						<p class="info">Honours Bachelor of Computer Science<span>&bull;</span> <em class="date">September 2009 &raquo; December 2014</em></p>
-						<p>
-							I studied <b>Computer Science</b> at the <a href="http://uwaterloo.ca">University of Waterloo</a>; I also graduated with a <b>History Minor</b>.
-							Relevant courses: CS349 (User Interfaces), CS370 (Numerical Computation), CS445 (Software Requirements: Specification &amp; Analysis), CS458 (Computer Security & Privacy), CS456 (Computer Networks).
-						</p>
-					</div>
-				</div> <!-- Undergraduate end -->
-				<!-- <div class="row item">
-					<div class="twelve columns">
-						<h3>University of Western Ontario</h3>
-						<p class="info">Master's of Business Administration<span>&bull;</span> <em class="date">April 2019</em></p>
-						<p>
-						I did my MBA here... (soonTM) (lol jk)
-						</p>
-					</div>
-				</div> <!-- Master's, eventually -->
-			</div> <!-- main-col end -->
-		</div> <!-- End Education -->
-		<!-- Work ----------------------------------------------- -->
-		<div class="row work">
-			<div class="three columns header-col">
-				<h1><span>Work</span></h1>
-				<h2><span>Click to scroll!</span></h2>
-				<a class="smoothscroll" href="#amazon" title="Amazon"><img src="images/amazon_logo.png" alt="Amazon.com" style="width:168px;height:48px;"></a><br/>
-				<a class="smoothscroll" href="#riot" title="Riot"><img src="images/RiotGames-logo.png" alt="Riot Games" style="width:120px;height:93px;"></a><br/>
-				<a class="smoothscroll" href="#audible" title="Audible"><img src="images/audible-logo.png" alt="Audible.com" style="width:180px;height:84px;"></a><br/>
-				<a class="smoothscroll" href="#shoptimize" title="Shoptimize"><img src="images/shoptimize-logo.jpg" alt="Shoptimize" style="width:77px;height:90px;"></a><br/>
-				<a class="smoothscroll" href="#datalot" title="Datalot"><img src="images/datalot-logo.png" alt="Datalot" style="width:121px;height:50px;"></a><br/>
-				<a class="smoothscroll" href="#bluecoat" title="Blue Coat"><img src="images/BlueCoat-logo.jpg" alt="Blue Coat Systems" style="width:158px;height:30px;"></a><br/>
-				<a class="smoothscroll" href="#agf" title="AGF"><img src="images/AGF-logo.jpg" alt="AGF Management" style="width:137px;height:91px;"></a><br/>
-			</div>
-			<div class="nine columns main-col">
-				<div id="amazon" class="row item">
-					<div class="twelve columns">
-						<h3><a href="https://smile.amazon.com">Amazon.com</a></h3>
-						<p class="info">Software Development Engineer<span>&bull;</span> <em class="date">June 2015 &raquo; Present</em></p>
-						<p>
-							I joined the Seller Services, Marketplace, Fulfillment Technologies team. Our team is responsible for building and maintaining the platform that vends shipping labels to third-party merchants that sell on Amazon Seller Central, from shipping carrier services such as FedEx, UPS, DHL, and Canada Post.
-						</p>
-					</div>
-				</div> <!-- end work experience current -->
-				<div id="riot" class="row item">
-					<div class="twelve columns">
-						<h3><a href="https://riotgames.com">Riot Games</a></h3>
-						<p class="info">Software Engineering Intern<span>&bull;</span> <em class="date">May 2014 &raquo; August 2014</em></p>
-						<p>
-							Riot Games is the maker of League of Legends, a game of the Multiplayer Online Battle Arena (MOBA) genre. I worked in the back­end web space, rebuilding the signup API to allow developers to create custom experiences for new users as they signed up for the game. I also designed and led a side project during the semi­annual Riot hackathon. 
-						</p>
-					</div>
-				</div> <!-- end work experience #1 -->
-				<div id="audible" class="row item">
-					<div class="twelve columns">
-						<h3><a href="https://audible.com">Audible</a> (a subsidiary of Amazon)</h3>
-						<p class="info">Software Development Engineer in Test (SDET) Intern<span>&bull;</span> <em class="date">January 2014 &raquo; April 2014</em></p>
-						<p>
-							My main responsibility involved implementing and maintaining a full­-featured automation suite for Kindle's Audible plugin for immersion reading using Java. My initial project was driving the design and planning phase of an internal developer tool meant for tracking third-party devices.
-						</p>
-					</div>
-				</div> <!-- end work experience #2 -->
-				<div id="shoptimize" class="row item">
-					<div class="twelve columns">
-						<h3>shoptimize</h3>
-						<p class="info">Co-founder, Product Manager<span>&bull;</span> <em class="date">May 2012 &raquo; August 2013</em></p>
-						<p>
-							Shoptimize was a mobile application meant to comprehensively optimize your grocery shopping experience­ through information, convenience, and time efficiency. My specific role was to find the user frustration in the grocery industry, by validating the market problem through grocers and shoppers alike. I also communicated product beta communications, public relations, and marketing philosophies through social media and at events. On the software side, I managed both the overall business vision and product design.
-						</p>
-					</div>
-				<!-- NOTE: Remove the "padding-top" part of the line if it messes up mobile too much... -->
-				</div> <!-- end work experience #3 -->
-				<div id="datalot" class="row item" style="padding-top:50px">
-					<div class="twelve columns">
-						<h3><a href="https://www.datalot.com">Datalot</a></h3>
-						<p class="info">Software Engineering Intern<span>&bull;</span> <em class="date">January 2013 &raquo; April 2013</em></p>
-						<p>
-							I built "Preview Action" of a window modal that dynamically populates dummy values from a back­end using POST/GET requests.  Also, I developed IVR menu feature for calling agents to manage control flow of incoming calls, and designed and created an in-­window modal that followed user while scrolling through page. My role also included maintenance - I fixed stylings of modals for current actions on event monitor windows. Lastly, I created and launched initial documentation efforts to connect and engage technical development with business development.
-						</p>
-					</div>
-				</div> <!-- end work experience #4 -->
-				<div id="bluecoat" class="row item" style="padding-top:50px">
-					<div class="twelve columns">
-						<h3><a href="https://www.bluecoat.com">Blue Coat Systems</a></h3>
-						<p class="info">Software Test Automation Engineer Intern<span>&bull;</span><em class="date">May 2011 &raquo; August 2011</em>; <em class="date">January 2012 &raquo; April 2012</em></p>
-						<p>
-							I did two co-op terms here. My main roles were developing and maintaining automation testing software for finding product bugs and errors in operating production code using proprietary software operating systems. I spent most of my time re­writing test units based on coverage requirements and expanding the coverage support for older versions. I was also responsible for refining the analysis and scope of test suites to better represent stability control and unit coverage. Lastly, I was involved in resolving and verifying feature requests and bugs under strict deadlines and constraints from multiple product teams.
-						</p>
-					</div>
-				</div> <!-- end work experience #5 -->
-				<div id="agf" class="row item" style="padding-top:50px">
-					<div class="twelve columns">
-						<h3><a href="https://www.agf.com">AGF Management Ltd.</a></h3>
-						<p class="info">PC Support Analyst Intern<span>&bull;</span><em class="date">April 2010 &raquo; August 2010</em></p>
-						<p>
-							I received an outstanding employer evaluation for the work I did here. My flagship role was implementing and sustaining business continuity strategy for G20 Summit migration to external office (65 employees). I also had a role in the early deployment of Windows 7 desktop migration project (pilot included 250 people) across two offices. Other day-to-day tasks including testing and reporting on various hardware specifications for user requirements, as well as assisting and verifying resolutions for various user-defined problems. Nearing the end of my term, I took the lead in drafting and maintaining training material for new hires in both co-op and full-time positions within the IT department.
-						</p>
-					</div>
-				</div> <!-- end work experience #6 -->
-			</div> <!-- main-col end -->
-		</div> <!-- End Work -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Redmond, Washington</p>
+      <h1>Michael Shao</h1>
+      <p class="hero-role">
+        <strong>Senior Software Engineer</strong> at Playlist Technologies.
+        Previously Morgan &amp; Morgan and a decade at Amazon.
+        Photographer, writer, and lifelong speedcuber.
+      </p>
+      <div class="hero-links">
+        <a href="https://blog.michaelshao.com">Blog</a>
+        <a href="https://github.com/mslshao">GitHub</a>
+        <a href="https://ca.linkedin.com/in/mshao">LinkedIn</a>
+        <a href="ms-resume.pdf?v=20260915-5">Resume</a>
+      </div>
+    </div>
+    <span class="hero-credit">Photograph by Michael Shao.</span>
+  </header>
 
-		<!-- Skills ----------------------------------------------- -->
-		<div class="row skill">
-			<div class="three columns header-col">
-				<h1><span>Skills</span></h1>
-			</div>
+  <main id="main" tabindex="-1">
+    <section id="about">
+      <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h2>Solving user frustration for over a decade.</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              My work spans backend services, AI-assisted workflows, engineering leadership,
+              and the infrastructure underneath it all. For over a decade, the instinct has
+              stayed the same: find where a system frustrates the people using it, then
+              fix the system. What AI changed is the economics. Frustrating systems are
+              still everywhere; the cost of fixing them has collapsed. The job now is
+              designing the workflows, standards, and guardrails that give a whole team
+              that leverage, not just whoever holds the newest tool.
+            </p>
+            <p>
+              Before Morgan &amp; Morgan, I spent a decade at Amazon and AWS: marketplace
+              logistics for millions of third-party sellers, product compatibility for
+              millions of customers, then developer advocacy for DynamoDB, writing for
+              the AWS Databases Blog and speaking at re:Invent 2024. Before that, the
+              University of Waterloo, where I earned an Honours Bachelor of Computer
+              Science through the Faculty of Mathematics, with a History minor. The
+              minor still shows in how I write and how I think about why systems end
+              up the way they are.
+            </p>
+            <p>
+              Away from a keyboard: landscape photography (everything on this page is
+              mine), snowboarding, tennis, and speedcubing. The cubing once put me on
+              <a href="https://www.pbs.org/newshour/show/rubiks-cubes-mystique-remains-40-years-later">PBS NewsHour</a>,
+              and my <a href="https://www.worldcubeassociation.org/persons/2009SHAO02">WCA results</a>
+              are a matter of public record.
+            </p>
+          </div>
+          <dl class="fact-card">
+            <dt>Currently</dt>
+            <dd>Senior Software Engineer, Playlist Technologies</dd>
+            <dt>Focus</dt>
+            <dd>Backend services, AI-assisted workflows, infrastructure, observability</dd>
+            <dt>Previously</dt>
+            <dd>Morgan &amp; Morgan, 2025 to 2026; Amazon and AWS, 2015 to 2025</dd>
+            <dt>Education</dt>
+            <dd>BCS Honours Co-op, History minor, University of Waterloo, Faculty of Mathematics</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-			<div class="nine columns main-col">
-				<p>
-					Version control systems: Mercurial, Git, Perforce, SVN.<br>
-					Environments: Windows (XP/7/10), Mac OS (X), and Linux (Ubuntu, RHEL).<br>
-					Extraneous skills: photography, music production, video editing.<br>
-				</p>
-				<p>
-					Here's a brief list of things I have experience with.<br>
-					While not comprehensive, think of it as an "in-progess" learning tracker.
-				</p>
-				<div class="bars">
-					<ul class="skills">
-						<li><span class="bar-expand java"></span><em>Java</em></li>
-						<li><span class="bar-expand cplusplus"></span><em>C++</em></li>
-						<li><span class="bar-expand javascript"></span><em>JavaScript</em></li>
-						<li><span class="bar-expand node"></span><em>Node.js</em></li>
-						<li><span class="bar-expand jquery"></span><em>jQuery</em></li>
-						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
-						<li><span class="bar-expand css"></span><em>CSS</em></li>
-						<li><span class="bar-expand php"></span><em>PHP</em></li>
-						<li><span class="bar-expand rubiks"></span><em><a href="https://www.youtube.com/watch?v=Ic4XTzv-Xr0">Solving a Rubik's Cube</a></em></li>
-					</ul>
-				</div><!-- end skill-bars -->
-			</div> <!-- main-col end -->
-		</div> <!-- End skills -->
-	</section> <!-- Resume/Skills Section End-->
+    <section id="work">
+      <div class="wrap">
+        <p class="eyebrow">Work</p>
+        <h2>Where I've built things</h2>
 
-   <!-- Quotes Section ================================================== -->
-   <section id="quotes">
-      <div class="text-container">
-         <div class="row">
-            <div class="two columns header-col">
-               <h1><span>Quotes</span></h1>
+        <article class="job">
+          <div class="job-when"><time datetime="2026-08-25">Aug 2026</time> &raquo; present</div>
+          <div>
+            <h3>Senior Software Engineer</h3>
+            <div class="job-org">Playlist Technologies</div>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-when">Jul 2025 &raquo; <time datetime="2026-08-21">Aug 2026</time></div>
+          <div>
+            <h3>Staff Software Engineer, Technical Lead</h3>
+            <div class="job-org">Morgan &amp; Morgan &middot; remote</div>
+            <p>
+              I was a technical lead at Morgan &amp; Morgan, building legal technology.
+              I architected the firm's agentic AI platform (Claude, Python,
+              FastAPI) and the engineering standards that supported it across a
+              thirty-person org, led a small team directly, and owned Terraform
+              infrastructure and Datadog observability across seven services. The rest
+              was zero-to-one experimentation: turning manual legal work into supervised,
+              human-in-the-loop automation for mass tort and medical malpractice cases.
+            </p>
+            <p>
+              I also owned document indexing services and operations for the Elastic
+              clusters holding the firm's medical records, court dockets, and police
+              reports. Those services supported document search through the firm's
+              customer-facing AI tools, which used an internal facade over the
+              underlying models.
+            </p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-when">2015 &raquo; 2025</div>
+          <div>
+            <h3>Software Development Engineer</h3>
+            <div class="job-org">Amazon and AWS &middot; Seattle</div>
+            <p>
+              Three tours. First, marketplace logistics: the platform vending shipping
+              labels from carriers like UPS, FedEx, DHL, and Royal Mail to third-party
+              sellers worldwide. Then product compatibility: the data pipelines and
+              customer-facing widgets that tell you whether a replacement part actually
+              fits your printer. Finally, AWS: developer advocacy for DynamoDB, five
+              posts on the AWS Databases Blog and a code talk at re:Invent 2024. Along
+              the way: interviewing Bar Raiser, security certifier, and organizer of a
+              weekly talk series whose topics included dumplings and kombucha.
+            </p>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-when">2010 &raquo; 2015</div>
+          <div>
+            <h3>The Waterloo years</h3>
+            <div class="job-org">Six co-ops, six industries</div>
+            <p class="job-earlier">
+              Riot Games (player accounts), Audible (test automation), a grocery-tech
+              startup I co-founded out of the VeloCity incubator, and stints in ad-tech,
+              network security, and finance IT. Six companies in six industries taught me
+              more about picking problems than any single job could have.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="photographs">
+      <div class="wrap">
+        <p class="eyebrow">Photographs</p>
+        <h2>Places worth the drive</h2>
+        <div class="gallery">
+          <figure>
+            <a href="images/optimized/moraine-lake-1920.webp" data-lightbox data-width="1920" data-height="1426"><img src="images/optimized/moraine-lake-480.webp" srcset="images/optimized/moraine-lake-480.webp 480w, images/optimized/moraine-lake-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Moraine Lake, turquoise water below the Valley of the Ten Peaks" width="1920" height="1426" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Moraine Lake</span><span class="when">Banff National Park &middot; July 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/oahu-night-1920.webp" data-lightbox data-width="1920" data-height="1280"><img src="images/optimized/oahu-night-480.webp" srcset="images/optimized/oahu-night-480.webp 480w, images/optimized/oahu-night-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Night sky over O'ahu" width="1920" height="1280" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">O'ahu night sky</span><span class="when">Hawai'i &middot; October 2019</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/angels-landing-1920.webp" data-lightbox data-width="1920" data-height="1280"><img src="images/optimized/angels-landing-480.webp" srcset="images/optimized/angels-landing-480.webp 480w, images/optimized/angels-landing-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="View from Angel's Landing, Zion National Park" width="1920" height="1280" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Angel's Landing</span><span class="when">Zion National Park &middot; April 2018</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/zion-national-park-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/zion-national-park-480.webp" srcset="images/optimized/zion-national-park-480.webp 480w, images/optimized/zion-national-park-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Canyon walls in Zion National Park" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Zion National Park</span><span class="when">Solo road trip &middot; April 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/lake-minnewanka-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/lake-minnewanka-480.webp" srcset="images/optimized/lake-minnewanka-480.webp 480w, images/optimized/lake-minnewanka-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Lake Minnewanka from the water" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Lake Minnewanka</span><span class="when">Banff National Park &middot; March 2016</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/rainier-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/rainier-480.webp" srcset="images/optimized/rainier-480.webp 480w, images/optimized/rainier-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Trail junction near the peak, Mount Rainier" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Mount Rainier</span><span class="when">Washington &middot; July 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/mount-hood-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/mount-hood-480.webp" srcset="images/optimized/mount-hood-480.webp 480w, images/optimized/mount-hood-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Mount Hood from an outlook near Hood River" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Mount Hood</span><span class="when">Hood River, Oregon &middot; May 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/calico-tanks-1920.webp" data-lightbox data-width="1920" data-height="1280"><img src="images/optimized/calico-tanks-480.webp" srcset="images/optimized/calico-tanks-480.webp 480w, images/optimized/calico-tanks-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Calico Tanks trail, Red Rock Canyon" width="1920" height="1280" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Calico Tanks</span><span class="when">Red Rock Canyon &middot; April 2018</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/red-rock-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/red-rock-480.webp" srcset="images/optimized/red-rock-480.webp 480w, images/optimized/red-rock-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Keystone Thrust Trail, Red Rock Canyon" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Keystone Thrust</span><span class="when">Red Rock Canyon &middot; April 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/hoover-dam-1920.webp" data-lightbox data-width="1920" data-height="1440"><img src="images/optimized/hoover-dam-480.webp" srcset="images/optimized/hoover-dam-480.webp 480w, images/optimized/hoover-dam-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Hoover Dam showing the water level colour change" width="1920" height="1440" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Hoover Dam</span><span class="when">Nevada &middot; April 2017</span></figcaption>
+          </figure>
+          <figure>
+            <a href="images/optimized/laserdome-1920.webp" data-lightbox data-width="1920" data-height="2560"><img src="images/optimized/laserdome-480.webp" srcset="images/optimized/laserdome-480.webp 480w, images/optimized/laserdome-960.webp 960w" sizes="(max-width: 627px) calc(100vw - 48px), (max-width: 927px) calc((100vw - 68px) / 2), (max-width: 1080px) calc((100vw - 88px) / 3), 331px" alt="Laser Stranger Things show at the LaserDome" width="1920" height="2560" loading="lazy" decoding="async"></a>
+            <figcaption><span class="where">Laser Stranger Things</span><span class="when">Pacific Science Center &middot; December 2017</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Photograph viewer" aria-describedby="lightbox-caption">
+        <div class="lightbox-toolbar">
+          <button type="button" id="lightbox-prev" aria-label="Previous photograph">&larr; Previous</button>
+          <span id="lightbox-count" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" id="lightbox-next" aria-label="Next photograph">Next &rarr;</button>
+          <button type="button" id="lightbox-close" autofocus>Close &times;</button>
+        </div>
+        <figure>
+          <div class="lightbox-media" id="lightbox-media">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" id="lightbox-img">
+            <div class="lightbox-status" id="lightbox-status" hidden>
+              <p id="lightbox-message" role="status"></p>
+              <button type="button" id="lightbox-retry" hidden>Try again</button>
             </div>
-            <div class="ten columns flex-container">
-               <div class="flexslider">
-                  <ul class="slides">
-					  <li>
-                        <blockquote>
-                           <p>Early success is a terrible teacher. 
-                           You're essentially being rewarded for a lack of preparation, 
-                           so when you find yourself in a situation where you must prepare, you can't do it. 
-                           You don't know how.
-                           </p>
-                           <cite>Chris Hadfield</cite>
-                        </blockquote>
-                     </li>
-					 <li>
-                        <blockquote>
-                           <p>If you always put limits on everything you do, physical or anything else, it will spread into your work and into your life. 
-                           There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.
-                           </p>
-                           <cite>Bruce Lee</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.
-                           </p>
-                           <cite>Ernest Hemingway</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Go to the gym, don't even work out. Just GO. 
-                           Because the habit of going to the gym is more important than the work out. 
-                           Because it doesn't matter what you do. 
-                           You can have fun - but as long as you're having fun, you continue to do it.
-                           </p>
-                           <cite>Terry Crews</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Decide in your heart of hearts what really excites and challenges you, and start moving your life in that direction. 
-                           Every decision you make, from what you eat to what you do with your time tonight, turns you into who you are tomorrow, and the day after that. 
-                           Look at who you want to be, and start sculpting yourself into that person. 
-                           You may not get exactly where you thought you'd be, but you will be doing things that suit you in a profession you believe in. 
-                           Don't let life randomly kick you into the adult you don't want to become.
-                           </p>
-                           <cite>Chris Hadfield</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Being grateful is the bridge between the world of nightmares and the world where we are free to say no. 
-                           It's the bridge between the world of delusions and the world of creativity.
-                           It's the power that brings death back to life, the power that turns poverty to wealth and anger to compassion.
-                           </p>
-                           <cite>James Altucher</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>I’ve missed more than 9000 shots in my career. 
-                           I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. 
-                           I’ve failed over and over and over again in my life. And that is why I succeed.
-                           </p>
-                           <cite>Michael Jordan</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Don't count the days. Make the days count.
-                           </p>
-                           <cite>Muhammad Ali</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.
-                           So throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.
-                           Explore, Dream, Discover.
-                           </p>
-                           <cite>Mark Twain</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>If you start thinking that only your biggest and shiniest moments count, you're setting yourself up to feel like a failure most of the time. 
-                           Personally, I'd rather feel good most of the time, so to me, everything counts: 
-                           the small moments, the medium ones, the successes that make the papers and also the ones that no one knows about but me.
-                           </p>
-                           <cite>Chris Hadfield</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>“The only truly safe thing you can do is to try over and over again. 
-                           To go for it, to get rejected, to repeat, to strive, to wish. 
-                           Without rejection there is no frontier, there is no passion, and there is no magic.
-                           </p>
-                           <cite>James Altucher</cite>
-                        </blockquote>
-                     </li>
-                     <li>
-                        <blockquote>
-                           <p>Ultimately, leadership is not about glorious crowning acts. 
-                           It's about keeping your team focused on a goal and motivated to do their best to achieve it, 
-                           especially when the stakes are high and the consequences really matter. 
-                           It is about laying the groundwork for others' success, and then standing back and letting them shine.
-                           </p>
-                           <cite>Chris Hadfield</cite>
-                        </blockquote>
-                     </li>
-                  </ul>
-               </div> <!-- div.flexslider ends -->
-            </div> <!-- div.flex-container ends -->
-         </div> <!-- row ends -->
-       </div>  <!-- text-container ends -->
-   </section> <!-- Testimonials Section End-->
-   <!-- Contact Section ================================================== -->
-	<section id="contact">
-		<div class="row section-head">
-			<div class="two columns header-col">
-				<h1><span>Get In Touch.</span></h1>
-			</div>
-			<div class="ten columns">
-				<p class="lead">Fill out this form if you would like to get in touch; standard response time is ~24 hours.<br>
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="eight columns">
-				<!-- form -->
-				<form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-						<div>
-							<label for="contactName">Name:<span class="required">*</span></label>
-							<input type="text" value="" size="35" id="contactName" placeholder="(required) Your Name" name="contactName">
-						</div>
-						<div>
-							<label for="contactEmail">E-mail:<span class="required">*</span></label>
-							<input type="text" value="" size="35" id="contactEmail" placeholder="(required) [email]@[domain]" name="contactEmail">
-						</div>
-						<div>
-							<label for="contactSubject">Subject:</label>
-							<input type="text" value="" size="35" id="contactSubject" placeholder="(optional)" name="contactSubject">
-						</div>
-						<div>
-							<label for="contactMessage">Message:<span class="required">*</span></label>
-							<textarea cols="50" rows="15" id="contactMessage" placeholder="(required) Type your message here! (Minimum 50 characters)" name="contactMessage"></textarea>
-						</div>
-						<div>
-							<label for="recaptcha">Recaptcha:<span class="required">*</span></label>
-							<div id="recaptcha" class="g-recaptcha" data-theme="dark" data-sitekey="6Lfwgv4SAAAAAE5bWbkwEX2vWlQzYrvTSR2ENeXY"></div><br/>
-						</div>
-						<div>
-							<button class="submit">Submit</button>
-							<span id="image-loader">
-								<img alt="" src="images/loader.gif">
-							</span>
-						</div>
-					</fieldset>
-				</form> <!-- Form End -->
-			<!-- contact-warning -->
-			<div id="message-warning">ERROR</div>
-				<!-- contact-success -->
-				<div id="message-success">
-				<i class="fa fa-check"></i>Your message was sent, thank you for reaching out!<br>
-				</div>
-			</div>
-			<aside class="four columns footer-widgets">
-				<div class="widget widget_contact">
-					<h4>Other Information</h4>
-					<p class="address">
-						<a href="http://michaelshao.com/resume.pdf" title="SDE Resume" download>SDE Resume</a><br>
-						<a href="http://michaelshao.com/resume1.html" title="Minimalist Resume" download>Minimalist Resume</a><br>
-						<a href="tel:+13476996049">347-699-6049</a><br>
-						<a href="mailto:me@michaelshao.com">me@michaelshao.com</a><br>
-					</p>
-				</div>
-				<div class="widget widget_tweets">
-					<h4 class="widget-title">Tweets</h4>
-					<ul id="twitter">
-						<li>
-							<span>
-								<a class="twitter-timeline" data-lang="en" data-width="300" data-height="600" data-theme="dark" href="https://twitter.com/mslshao">Tweets by mslshao</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-							</span>
-						</li>
-					</ul>
-				</div> <!-- Widgets div end -->
-			</aside>
-		</div>
-	</section> <!-- Contact Section End-->
-	<!-- footer ================================================== -->
-	<footer>
-		<div class="row">
-			<div class="twelve columns">
-				<ul class="social-links">
-					<li><a href="http://www.facebook.com/chairmanshao"><i class="fa fa-facebook-square"></i></a></li>
-					<li><a href="http://twitter.com/mslshao"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="http://instagram.com/mslshao"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="http://ca.linkedin.com/in/mshao"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://github.com/mslshao"><i class="fa fa-github"></i></a></li>
-					<li><a href="http://angel.co/mshao"><i class="fa fa-angellist"></i></a></li>
-					<li><a href="http://reddit.com/u/riotshao"><i class="fa fa-reddit"></i></a></li>
-					<li><a href="http://www.quora.com/Michael-Shao-6"><i class="fa fa-quora"></i></a></li>
-					<li><a href="http://mshao.yelp.ca"><i class="fa fa-yelp"></i></a></li>
-					<li><a href="http://blog.michaelshao.com"><i class="fa fa-wordpress"></i></a></li>
-					<li><a href="http://www.youtube.com/user/chairmanshao"><i class="fa fa-youtube-square"></i></a></li>
-					<li><a href="http://steamcommunity.com/id/mshao"><i class="fa fa-steam"></i></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; 2017 Chairman Shao</li>
-					<li>Hosted on <a rel="nofollow" href="http://www.skgoldhosting.com/">SKGold Hosting</a></li>
-				</ul>
-			</div>
-			<div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-		</div>
-	</footer> <!-- Footer End-->
+          </div>
+          <figcaption id="lightbox-caption" aria-live="polite" aria-atomic="true"></figcaption>
+        </figure>
+      </dialog>
+    </section>
 
-	<!-- JavaScript add-ons ================================================== -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js"><\/script>')</script>
-	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/waypoints.js"></script>
-	<script src="js/jquery.fittext.js"></script>
-	<script src="js/magnific-popup.js"></script>
-	<script src="js/init.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <section id="writing">
+      <div class="wrap">
+        <p class="eyebrow">Writing</p>
+        <h2>Occasional essays</h2>
+        <p>
+          I write about engineering leadership, AI tooling, and the habits that make
+          both work. From 2024 to 2025 I wrote for the AWS Databases Blog as the
+          developer advocate for DynamoDB; those pieces are below.
+        </p>
+        <ul class="writing-list">
+          <li>
+            <span class="when">Jun 2025</span>
+            <span><a href="https://aws.amazon.com/blogs/database/supercharging-aws-database-development-with-aws-mcp-servers/">Supercharging AWS database development with AWS MCP servers</a> &middot; AWS Databases Blog, co-authored</span>
+          </li>
+          <li>
+            <span class="when">Feb 2025</span>
+            <span><a href="https://aws.amazon.com/blogs/database/2024-a-year-of-innovation-and-growth-for-amazon-dynamodb/">2024: A year of innovation and growth for Amazon DynamoDB</a> &middot; AWS Databases Blog</span>
+          </li>
+          <li>
+            <span class="when">Dec 2024</span>
+            <span><a href="https://aws.amazon.com/blogs/database/amazon-dynamodb-reinvent-2024-recap/">Amazon DynamoDB re:Invent 2024 recap</a> &middot; AWS Databases Blog</span>
+          </li>
+          <li>
+            <span class="when">Nov 2024</span>
+            <span><a href="https://aws.amazon.com/blogs/database/know-before-you-go-amazon-dynamodb-sessions-at-aws-reinvent-2024/">Know before you go: DynamoDB sessions at AWS re:Invent 2024</a> &middot; AWS Databases Blog</span>
+          </li>
+          <li>
+            <span class="when">May 2024</span>
+            <span><a href="https://aws.amazon.com/blogs/database/choose-the-right-change-data-capture-strategy-for-your-amazon-dynamodb-applications/">Choose the right change data capture strategy for your DynamoDB applications</a> &middot; AWS Databases Blog</span>
+          </li>
+          <li>
+            <span class="when">Nov 2018</span>
+            <span><a href="https://chairmanshao.wordpress.com/2018/11/15/impostor-syndrome-what-is-good-enough/">Impostor syndrome: what is good enough?</a> &middot; on the archive blog</span>
+          </li>
+          <li>
+            <span class="when">Nov 2017</span>
+            <span><a href="https://chairmanshao.wordpress.com/2017/11/23/optimizing-for-relative-value-money-time-effort/">Optimizing for relative value: money, time, effort</a> &middot; on the archive blog</span>
+          </li>
+          <li>
+            <span class="when">Jan 2017</span>
+            <span><a href="https://chairmanshao.wordpress.com/2017/01/22/transitioning-from-classroom-learning-to-workplace-learning/">From classroom learning to workplace learning</a> &middot; on the archive blog</span>
+          </li>
+          <li>
+            <span class="when">Oct 2016</span>
+            <span><a href="https://chairmanshao.wordpress.com/2016/10/10/post-graduation-mentorship/">Post-graduation mentorship</a> &middot; on the archive blog</span>
+          </li>
+          <li>
+            <span class="when">Apr 2015</span>
+            <span><a href="https://chairmanshao.wordpress.com/2015/04/22/waterloo-entrepreneurship-and-my-first-startup-failure/">Waterloo, entrepreneurship, and my first startup failure</a> &middot; on the archive blog</span>
+          </li>
+        </ul>
+        <p class="writing-note">
+          The older personal archive lives on
+          <a href="https://chairmanshao.wordpress.com/">WordPress</a> until it's migrated here.
+        </p>
+      </div>
+    </section>
+
+    <section id="quotes">
+      <div class="wrap">
+        <p class="eyebrow">Quotes</p>
+        <h2>Words I keep coming back to</h2>
+        <blockquote class="quote-featured">
+          <p>Early success is a terrible teacher. You're essentially being rewarded for a lack of preparation, so when you find yourself in a situation where you must prepare, you can't do it. You don't know how.</p>
+          <cite>Chris Hadfield</cite>
+        </blockquote>
+        <div class="quote-grid">
+          <blockquote>
+            <p>Embrace failure. Never never quit. Get very comfortable with that uneasy feeling of going against the grain and trying something new. It will constantly take you places you never thought you could go.</p>
+            <cite>Terry Crews</cite>
+          </blockquote>
+          <blockquote>
+            <p>There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.</p>
+            <cite>Bruce Lee</cite>
+          </blockquote>
+          <blockquote>
+            <p>There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.</p>
+            <cite><a href="https://quoteinvestigator.com/2017/03/11/superior/">After W. L. Sheldon</a></cite>
+          </blockquote>
+          <blockquote>
+            <p>Go to the gym, don't even work out. Just GO. Because the habit of going to the gym is more important than the workout.</p>
+            <cite>Terry Crews</cite>
+          </blockquote>
+          <blockquote>
+            <p>Don't let life randomly kick you into the adult you don't want to become.</p>
+            <cite>Chris Hadfield</cite>
+          </blockquote>
+          <blockquote>
+            <p>Being grateful is the bridge between the world of nightmares and the world where we are free to say no.</p>
+            <cite>James Altucher</cite>
+          </blockquote>
+          <blockquote>
+            <p>I've failed over and over and over again in my life. And that is why I succeed.</p>
+            <cite>Michael Jordan</cite>
+          </blockquote>
+          <blockquote>
+            <p>Don't count the days. Make the days count.</p>
+            <cite>Muhammad Ali</cite>
+          </blockquote>
+          <blockquote>
+            <p>We suffer not from the events in our lives but from our judgment about them.</p>
+            <cite>Epictetus</cite>
+          </blockquote>
+          <blockquote>
+            <p>Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover.</p>
+            <cite><a href="https://marktwainstudies.com/the-apocryphal-twain/the-apocryphal-twain-the-things-you-didnt-do/">Sarah Frances Brown</a></cite>
+          </blockquote>
+          <blockquote>
+            <p>If you start thinking that only your biggest and shiniest moments count, you're setting yourself up to feel like a failure most of the time.</p>
+            <cite>Chris Hadfield</cite>
+          </blockquote>
+          <blockquote>
+            <p>Without rejection there is no frontier, there is no passion, and there is no magic.</p>
+            <cite>James Altucher</cite>
+          </blockquote>
+          <blockquote>
+            <p>Leadership is about laying the groundwork for others' success, and then standing back and letting them shine.</p>
+            <cite>Chris Hadfield</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <div class="contact-grid">
+          <div>
+            <p>
+              For anything professional, casual, or cube-related, send me a message
+              using this form. I usually respond within a day.
+            </p>
+          </div>
+          <!-- Verify spam protection in the Formspree dashboard before publishing.
+               The _gotcha field is Formspree's honeypot. -->
+          <form class="contact-form" action="https://formspree.io/f/xojopawr" method="POST">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label>Name
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+            <label>Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>&copy; 2026 Michael Shao. All photographs mine.</span>
+      <span>No trackers, no frameworks, no carousel.</span>
+    </div>
+  </footer>
+
+
 </body>
 </html>
