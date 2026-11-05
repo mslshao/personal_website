@@ -12,10 +12,38 @@
   <meta property="og:url" content="https://michaelshao.com/">
   <meta property="og:title" content="Michael Shao | Software Engineer, Photographer &amp; Writer">
   <meta property="og:description" content="Senior Software Engineer at Playlist Technologies. Photography, writing, and a lifelong curiosity about how things work.">
-  <meta property="og:image" content="https://michaelshao.com/images/optimized/header-background-1920.webp">
+  <meta property="og:site_name" content="Michael Shao">
+  <!-- JPEG, not WebP: LinkedIn and some other link-preview crawlers reject WebP. -->
+  <meta property="og:image" content="https://michaelshao.com/images/optimized/social-card-1200x630.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Landscape photograph by Michael Shao">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1b2a32">
+  <!-- The hero photo is a CSS background and the headline font sits behind fonts.css;
+       preloading both starts them with the HTML. Media queries mirror styles.css. -->
+  <link rel="preload" as="image" href="images/optimized/header-background-960.webp" type="image/webp" media="(max-width: 600px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/optimized/header-background-1920.webp" type="image/webp" media="(min-width: 601px)" fetchpriority="high">
+  <link rel="preload" as="font" href="fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1Xp.woff2" type="font/woff2" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michael Shao",
+    "url": "https://michaelshao.com/",
+    "jobTitle": "Senior Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "Playlist Technologies" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Waterloo" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Redmond", "addressRegion": "WA", "addressCountry": "US" },
+    "sameAs": [
+      "https://github.com/mslshao",
+      "https://www.linkedin.com/in/mshao",
+      "https://blog.michaelshao.com",
+      "https://www.worldcubeassociation.org/persons/2009SHAO02"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="fonts/fonts.css?v=20260915">
   <link rel="stylesheet" href="styles.css?v=20260915-2">
   <script src="site.js?v=20260915-2" defer></script>

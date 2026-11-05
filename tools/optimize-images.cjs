@@ -21,6 +21,16 @@ const photos = ['moraine-lake.jpg', 'oahu-night.JPG', 'angels-landing.jpg', 'zio
       report.push({source:name, file:target, width:info.width, height:info.height, bytes:info.size});
     }
   }
+  // Link previews (og:image) need JPEG; LinkedIn does not reliably accept WebP.
+  // Crop to 1200x630 at the hero's CSS position (center 40%).
+  const header = path.join(sourceRoot, 'images', 'header-background.jpg');
+  const meta = await sharp(header).metadata();
+  const [w, h] = meta.orientation >= 5 ? [meta.height, meta.width] : [meta.width, meta.height];
+  const scaledHeight = Math.round(h * 1200 / w);
+  const card = await sharp(header).rotate().resize({width:1200})
+    .extract({left:0, top:Math.round((scaledHeight - 630) * 0.4), width:1200, height:630})
+    .jpeg({quality:85, mozjpeg:true}).toFile(path.join(out, 'social-card-1200x630.jpg'));
+  report.push({source:'header-background.jpg', file:'social-card-1200x630.jpg', width:card.width, height:card.height, bytes:card.size});
   await sharp(path.join(sourceRoot, 'favicon.png')).resize(32,32,{fit:'contain',background:'#ffffff00'})
     .png().toFile(path.join(root,'favicon-32.png'));
   await fs.mkdir(path.join(root,'.local','checks'),{recursive:true});
