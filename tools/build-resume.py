@@ -27,7 +27,7 @@ def add(text,style='body'):
         story.append(rule)
 add(escape(data['name'].upper()),'name')
 contact=escape(data['contact'])
-for label,url in [('linkedin.com/in/mshao','https://linkedin.com/in/mshao'),('michaelshao.com','https://michaelshao.com')]:
+for label,url in [('linkedin.com/in/mshao','https://www.linkedin.com/in/mshao'),('michaelshao.com','https://michaelshao.com')]:
     contact=contact.replace(label,f'<a href="{url}" color="#1f5a54">{label}</a>')
 add(contact,'contact')
 add('PROFESSIONAL SUMMARY','section')
